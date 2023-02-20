@@ -2,62 +2,53 @@ package com.example.testapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    public static final String TAG = MainActivity.class.getSimpleName();
+    public static final String TAG = SecondActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.e(TAG, "onCreate(): MainActivity");
+        setContentView(R.layout.activity_second);
+        Log.e(TAG, "OnCreate(): SecondActivity");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(TAG, "onStart(): MainActivity");
+        Log.e(TAG, "onStart(): SecondActivity");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(TAG, "onResume(): MainActivity");
+        Log.e(TAG, "onResume(): SecondActivity");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(TAG, "onPause(): MainActivity");
+        Log.e(TAG, "onPause(): SecondActivity");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(TAG, "onStop(): MainActivity");
+        Log.e(TAG, "onStop(): SecondActivity");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(TAG, "onDestroy(): MainActivity");
+        Log.e(TAG, "onDestroy(): SecondActivity");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.e(TAG, "onRestart(): MainActivity");
+        Log.e(TAG, "onRestart(): SecondActivity");
     }
-
-    public void LaunchSecondActivity(View view) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
-
-
 }
